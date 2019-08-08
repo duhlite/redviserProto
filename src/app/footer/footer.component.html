@@ -1,8 +1,16 @@
 <footer class="container mx-auto">
   <div class="mx-auto">
-      <p class="inline-block p-2">Terms and Conditions</p>
+      <button class="inline-block p-2" (click)="openModal('terms')">Terms and Conditions</button>
       <p class="inline-block p-2">Privacy Policy</p>
       <p class="inline-block p-2">Copyright © Travis Mingalone 2019</p>
       <p class="inline-block p-2">Contact Us</p>
   </div>
 </footer>
+
+<jw-modal id="terms">
+  <div class="bg-gray-500 p-4">
+    <p class="text-2xl font-extrabold text-blue-900 text-center">Terms and Conditions</p>
+    <app-terms></app-terms>
+    <button (click)="closeModal('terms');">Close</button>
+  </div>
+</jw-modal>
