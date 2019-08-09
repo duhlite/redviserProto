@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TermsComponent } from './footer/terms/terms.component';
 import { PrivacyComponent } from './footer/privacy/privacy.component';
+import { AboutProgramComponent } from './about-program/about-program.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PrivacyComponent } from './footer/privacy/privacy.component';
     HeaderComponent,
     FooterComponent,
     TermsComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    AboutProgramComponent
   ],
   imports: [
     BrowserModule,
