@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TermsComponent } from './footer/terms/terms.component';
 import { PrivacyComponent } from './footer/privacy/privacy.component';
 import { AboutProgramComponent } from './about-program/about-program.component';
+import { AboutFoundersComponent } from './about-founders/about-founders.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutProgramComponent } from './about-program/about-program.component';
     FooterComponent,
     TermsComponent,
     PrivacyComponent,
-    AboutProgramComponent
+    AboutProgramComponent,
+    AboutFoundersComponent
   ],
   imports: [
     BrowserModule,

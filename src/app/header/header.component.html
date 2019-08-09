@@ -1,6 +1,11 @@
 <nav class="flex items-center justify-between flex-wrap bg-indigo-800 p-6">
   <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <img class="fill-current h-8 w-8 mr-2" width="54" height="54" src="../../assets/Redvisor.png">
+    <img class="fill-current h-8 w-8 mr-2" 
+         width="54" 
+         height="54" 
+         src="../../assets/Redvisor.png" 
+         routerLinkActive="active" 
+         routerLink="">
     <span class="font-semibold text-xl tracking-tight">
       Redviser
     </span>
@@ -17,10 +22,14 @@
   <div class="w-full-block flex-grow lg:flex lg:items-center lg:w-auto"
        [ngClass]="{ 'hidden': navbarOpen }">
     <div class="text-sm lg:flex-grow">
-      <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+         routerLinkActive="active"
+         routerLink="/about">
         About RedViser
       </a>
-      <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+         routerLinkActive="active"
+         routerLink="/team">
         About Us
       </a>
       <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">

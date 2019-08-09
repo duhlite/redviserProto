@@ -1,0 +1,17 @@
+<div class="container mx-auto">
+  <p class="text-2xl font-bold text-center text-blue-900 p-6">About the Founders</p>
+  <p class="text-base text-blue-900">Redviser was founded in 2018 by Dmitri Kuznetsov, Ph.D. in physics and mathematics, and Igor Mandel, Ph.D., Dr. Sc. in statistics and economics. The purpose was to join our efforts in providing cutting-edge marketing and modeling services, based on rich expertise we obtained in those areas while working at top US companies, such as PwC, Genpact, MPG (Havas), Telmar Inc., Sigma Marketing Group, Intelli-Global Corp. and others for the last two decades. We have worked together and independently publishing and creating marketing models for many companies, as either main developers or participants, in many industries:</p>
+  <ul style="list-style-type: circle; list-style-position: inside">
+    <li *ngFor="let industry of industries"
+        class="text-base text-blue-900">{{ industry }}</li>
+    <br />
+  </ul>
+  <p class="text-base text-blue-900">Our areas of expertise cover:</p>
+  <ul style="list-style-type: circle; list-style-position: inside">
+    <li *ngFor="let area of areas" class="text-base text-blue-900">{{ area }}</li>
+  </ul>
+  <br />
+  <p class="text-base text-blue-900">We have published three books and about 200 research papers combined.</p>
+  <br />
+  <p class="text-base text-blue-900">In addition, at Redviser we developed an advanced platform for real-time promotions in retail that has several important innovations (some of them are patent protected) and actively uses artificial intelligence and machine learning algorithms to increase store profit and improve customer experience.</p>
+</div>
