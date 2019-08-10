@@ -4,12 +4,7 @@
   <img src="../../assets/about-slide1.png" alt="app sample use">
   <p class="text-base text-blue-900">Using this platform you agree to receive e-mail and SMS messages from Redviser. You understand and agree that:</p>
   <ul style="list-style-type: circle; list-style-position: inside">
-    <li class="text-base text-blue-900">To release and redeem coupons you should physically be inside the corresponding store and allow location access for the internet-connect device that you bring with you to the store.</li>
-    <li class="text-base text-blue-900">The released coupons are valid during 1 (one) hour after you released them. Time is calculated by our server and not always exactly matched to time on other devices.</li>
-    <li class="text-base text-blue-900">To redeem coupons you should hand your device to the cashier to scan your customer barcode and the coupon barcodes.</li>
-    <li class="text-base text-blue-900">The promotional products, offered via Redviser platform, are available while the stock lasts and are not guaranteed during the entire promotional period.</li>
-    <li class="text-base text-blue-900">Coupons are void if altered or unlawfully reproduced.</li>
-    <li class="text-base text-blue-900">Each coupon can be used only one time.</li>
-    <li class="text-base text-blue-900">Redviser keeps rights to revoke any issued promotions at any time with or without any reasons.</li>
+    <li *ngFor="let guideline of guidelines" 
+        class="text-base text-blue-900">{{ guideline }}</li>
   </ul>
 </div>

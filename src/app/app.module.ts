@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { ModalModule } from "./_modal";
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { TermsComponent } from './footer/terms/terms.component';
 import { PrivacyComponent } from './footer/privacy/privacy.component';
 import { AboutProgramComponent } from './about-program/about-program.component';
 import { AboutFoundersComponent } from './about-founders/about-founders.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { AboutFoundersComponent } from './about-founders/about-founders.componen
     TermsComponent,
     PrivacyComponent,
     AboutProgramComponent,
-    AboutFoundersComponent
+    AboutFoundersComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ModalModule
   ],
   providers: [],

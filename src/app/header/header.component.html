@@ -32,7 +32,7 @@
          routerLink="/team">
         About Us
       </a>
-      <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a (click)="openModal('contact')" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
         Questions/Comments
       </a>
       <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
@@ -44,3 +44,8 @@
     </a>
   </div>
 </nav>
+
+<jw-modal id="contact">
+  <app-contact></app-contact>
+  <button (click)="closeModal('contact');">Close</button>
+</jw-modal>
