@@ -13,6 +13,7 @@ import { PrivacyComponent } from './footer/privacy/privacy.component';
 import { AboutProgramComponent } from './about-program/about-program.component';
 import { AboutFoundersComponent } from './about-founders/about-founders.component';
 import { ContactComponent } from './contact/contact.component';
+import { StoreContactComponent } from './header/store-contact/store-contact.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactComponent } from './contact/contact.component';
     PrivacyComponent,
     AboutProgramComponent,
     AboutFoundersComponent,
-    ContactComponent
+    ContactComponent,
+    StoreContactComponent
   ],
   imports: [
     BrowserModule,

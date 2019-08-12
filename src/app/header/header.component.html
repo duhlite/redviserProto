@@ -32,10 +32,12 @@
          routerLink="/team">
         About Us
       </a>
-      <a (click)="openModal('contact')" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a (click)="openModal('contact')" 
+         class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 cursor-pointer">
         Questions/Comments
       </a>
-      <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a (click)="openModal('store-contact')" 
+         class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 cursor-pointer">
         Store Owner? Connect
       </a>
     </div>
@@ -46,6 +48,17 @@
 </nav>
 
 <jw-modal id="contact">
-  <app-contact></app-contact>
-  <button (click)="closeModal('contact');">Close</button>
+  <div class="p-4 bg-gray-500">
+    <p class="text-2xl font-extrabold text-blue-900 text-center">Contact Us!</p>
+    <app-contact></app-contact>
+    <button (click)="closeModal('contact');">Close</button>
+  </div>
+</jw-modal>
+
+<jw-modal id="store-contact">
+  <div class="p-4 bg-gray-500">
+    <p class="text-2xl font-extrabold text-blue-900 text-center">Store Contact</p>
+    <app-store-contact></app-store-contact>
+    <button (click)="closeModal('store-contact');">Close</button>
+  </div>
 </jw-modal>
