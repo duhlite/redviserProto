@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { ModalModule } from "./_modal";
 import { AppRoutingModule } from './app-routing.module';
 
+import { AlertComponent } from "./_components/alert.component";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,7 +26,8 @@ import { StoreContactComponent } from './header/store-contact/store-contact.comp
     AboutProgramComponent,
     AboutFoundersComponent,
     ContactComponent,
-    StoreContactComponent
+    StoreContactComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
