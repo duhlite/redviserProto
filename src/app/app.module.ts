@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { ModalModule } from "./_modal";
 import { AppRoutingModule } from './app-routing.module';
+import { fakeBackendProvider } from "./_helpers/fake-backend";
+import { JwtInterceptor } from "./_helpers/jwt.interceptor";
+import { ErrorInterceptor } from "./_helpers/error.interceptor";
 
 import { AlertComponent } from "./_components/alert.component";
 import { AppComponent } from './app.component';
@@ -15,6 +19,7 @@ import { AboutProgramComponent } from './about-program/about-program.component';
 import { AboutFoundersComponent } from './about-founders/about-founders.component';
 import { ContactComponent } from './contact/contact.component';
 import { StoreContactComponent } from './header/store-contact/store-contact.component';
+import { LoginComponent } from './header/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,15 +32,20 @@ import { StoreContactComponent } from './header/store-contact/store-contact.comp
     AboutFoundersComponent,
     ContactComponent,
     StoreContactComponent,
-    AlertComponent
+    AlertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     ModalModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
