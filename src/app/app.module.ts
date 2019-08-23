@@ -20,6 +20,7 @@ import { AboutFoundersComponent } from './about-founders/about-founders.componen
 import { ContactComponent } from './contact/contact.component';
 import { StoreContactComponent } from './header/store-contact/store-contact.component';
 import { LoginComponent } from './header/login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './header/login/login.component';
     ContactComponent,
     StoreContactComponent,
     AlertComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

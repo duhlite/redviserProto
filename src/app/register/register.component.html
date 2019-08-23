@@ -1,0 +1,69 @@
+<div class="container mx-auto">
+  <div class="w-full max-w-xs">
+    <h1 class="text-2xl font-bold text-blue-900 text-center p-6">Register</h1>
+    <form 
+      class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      [formGroup]="registerForm" 
+      (ngSubmit)="onSubmit()">
+      <div class="mb-4 form-group">
+        <label for="firstName">First Name</label>
+        <input 
+          type="text"
+          formControlName="firstName"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"/>
+        <div 
+          *ngIf="submitted && f.firstName.errors" 
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div *ngIf="f.firstName.errors.required">First name is required</div>
+        </div>
+      </div>
+      <div class="mb-4 form-group">
+        <label for="lastName">Last Name</label>
+        <input 
+          type="text"
+          formControlName="lastName"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"/>
+        <div 
+          *ngIf="submitted && f.lastName.errors" 
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div *ngIf="f.lastName.errors.required">Last name is required</div>
+        </div>
+      </div>
+      <div class="mb-4 form-group">
+        <label for="username">Username</label>
+        <input 
+          type="text"
+          formControlName="username"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+        <div 
+          *ngIf="submitted && f.username.errors" 
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+      </div>
+      <div class="mb-4 form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password"
+          formControlName="password"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+        <div 
+          *ngIf="submitted && f.password.errors" 
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div *ngIf="f.password.errors.required">Username is required</div>
+          <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters long</div>
+        </div>
+      </div>
+      <div class="mb-4 form-group">
+        <button [disabled]="loading" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Register
+        </button>
+        <a href="#">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
