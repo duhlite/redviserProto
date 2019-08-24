@@ -4,12 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutProgramComponent } from "./about-program/about-program.component";
 import { AboutFoundersComponent } from './about-founders/about-founders.component';
 import { LoginComponent } from './header/login/login.component';
+import { SplashComponent } from './splash/splash.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/team', pathMatch: 'full' },
+  { path: '', component: SplashComponent, pathMatch: 'full' },
   { path: 'about', component: AboutProgramComponent },
   { path: 'team', component: AboutFoundersComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
 ];
 
 @NgModule({
