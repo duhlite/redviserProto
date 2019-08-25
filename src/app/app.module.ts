@@ -22,6 +22,7 @@ import { StoreContactComponent } from './header/store-contact/store-contact.comp
 import { LoginComponent } from './header/login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SplashComponent } from './splash/splash.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SplashComponent } from './splash/splash.component';
     AlertComponent,
     LoginComponent,
     RegisterComponent,
-    SplashComponent
+    SplashComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

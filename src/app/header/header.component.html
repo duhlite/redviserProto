@@ -40,12 +40,29 @@
          class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 cursor-pointer">
         Store Owner? Connect
       </a>
+      <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 cursor-pointer"
+         *ngIf="currentUser"
+         routerLinkActive="active"
+         [routerLink]="['/profile', currentUser.username]">
+        Profile
+      </a>
     </div>
-    <a class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-       routerLinkActive="active"
-       routerLink="/login">
-      Login
-    </a>
+    <div *ngIf="!currentUser">
+      <a class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+         routerLinkActive="active"
+         routerLink="/login">
+        Login
+      </a>
+    </div>
+    <div *ngIf="currentUser">
+      <p class="text-white inline-block mx-2">
+        Logged in as <a [routerLink] = "['/profile', currentUser.username]">{{ currentUser.username }}</a>
+      </p>
+      <div class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+           (click)="logout()">
+        Logout
+      </div>
+    </div>
   </div>
 </nav>
 

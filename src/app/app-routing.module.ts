@@ -6,13 +6,15 @@ import { AboutFoundersComponent } from './about-founders/about-founders.componen
 import { LoginComponent } from './header/login/login.component';
 import { SplashComponent } from './splash/splash.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: SplashComponent, pathMatch: 'full' },
   { path: 'about', component: AboutProgramComponent },
   { path: 'team', component: AboutFoundersComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile/:username', component: ProfileComponent}
 ];
 
 @NgModule({
