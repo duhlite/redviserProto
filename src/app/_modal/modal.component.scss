@@ -17,6 +17,11 @@ jw-modal {
       height: 75%;
       width: 50%;
       margin: auto;
+      overflow: auto;
+
+      @media only screen and (max-width: 640px) {
+        width: 75%;
+      }
     }
   }
 
@@ -33,5 +38,5 @@ jw-modal {
 }
 
 body.jw-modal-open {
-  overflow: hidden;
+  overflow: auto;
 }
