@@ -67,17 +67,31 @@
 </nav>
 
 <jw-modal id="contact">
-  <div class="p-4 bg-gray-500">
-    <p class="text-2xl font-extrabold text-blue-900 text-center">Contact Us!</p>
+  <div class="p-4 bg-gray-500 h-full overflow-auto container">
+    <p class="text-2xl font-extrabold text-blue-900 text-center mb-4">Contact Us!</p>
     <app-contact></app-contact>
-    <button (click)="closeModal('contact');">Close</button>
+    <button 
+      (click)="closeModal('contact');"
+      class="bg-blue-900 px-4 py-2 border rounded border-blue-600 block m-4 mb-0 inline-block text-teal-200 hover:text-white hover:bg-blue-700">
+      Close
+    </button>
+    <p class="text-center text-blue-900 text-xs">
+      &copy;2019 Travis Mingalone
+    </p>
   </div>
 </jw-modal>
 
 <jw-modal id="store-contact">
-  <div class="p-4 bg-gray-500">
-    <p class="text-2xl font-extrabold text-blue-900 text-center">Store Contact</p>
+  <div class="p-4 bg-gray-500 h-full overflow-auto container">
+    <p class="text-2xl font-extrabold text-blue-900 text-center mb-4">Store Contact</p>
     <app-store-contact></app-store-contact>
-    <button (click)="closeModal('store-contact');">Close</button>
+    <button 
+      (click)="closeModal('store-contact');"
+      class="bg-blue-900 px-4 py-2 border rounded border-blue-600 block m-4 mb-0 inline-block text-teal-200 hover:text-white hover:bg-blue-700">
+      Close
+    </button>
+    <p class="text-center text-blue-900 text-xs">
+      &copy;2019 Travis Mingalone
+    </p>
   </div>
 </jw-modal>
